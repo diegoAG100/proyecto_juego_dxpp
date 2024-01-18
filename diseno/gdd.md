@@ -10,7 +10,7 @@ El juego estará ambientando en un circo abandonado, su estética será en pixel
 
 La historia es inexistente.
 
-El objetivo del jugador será escapar del circo, el jugador tendrá que enfrentarse a 4 minijuegos del circo mientras se defiende de un monstruo que intentara acabar con el, los 4 minijuegos serán:
+El objetivo del jugador será escapar del circo, el jugador tendrá que enfrentarse a 4 minijuegos del circo mientras se defiende de un monstruo que intentara acabar con él, los 4 minijuegos serán:
 
 1. Escopeta: En este minijuego tendrás que tirar 10 latas con disparos, en este minijuego el ratón (del ordenador) se convertirá en un círculo rojo, en cuanto el jugador pulse en un punto de la pantalla aparecerá un nuevo círculo negro
 alrededor del círculo rojo mientras se mantenga presionado el círculo irá haciéndose más pequeño hasta que se ponga del tamaño del círculo rojo, si el jugador tarda más de 2 segundos en disparar después de que llegue al círculo rojo
@@ -28,13 +28,13 @@ Efecto de ilusión de movimiento hacia delante, si entra dentro anotará un punt
 4. Vasos: En este minijuego habrá 3 vasos y el jugador verá como se mete una pelota roja dentro de un vaso y se empezarán a bajar intercambiando posiciones de manera aleatoria unos con otros, el objetivo es ver
 el vaso en el que está la pelota y el jugador tendrá que encontrar la pelota 3 veces.
 
-Se transicionara entre minijuegos cuando se consiga la puntuación necesaria con un fundido a negro que se usara para cambio de fondo y assets.
+Se traicionara entre minijuegos cuando se consiga la puntuación necesaria con un fundido a negro que se usara para cambio de fondo y assets.
 
 Mientras el jugador hace estos minijuegos tendrá que lidiar con un monstruo que te atacara, estará detrás del jugador y siempre tendrá un botón que le permitirá darse la vuelta para alumbrar al enemigo y que desaparezca,
 pero si alumbra sin que el monstruo este perderá una vida de las 3 que tendrá, solo perderá vidas al alumbrar erróneamente al monstruo, las vidas estarán en una esquina arriba a la izquierda y serán corazones,
 en el momento en el que el jugador vuelva al minijuego, si es el minijuego de los vasos se reiniciará el último intento para que puedas volver a ver donde se mete la bola, el monstruo tendrá 3 posiciones en la que
 Podrá estará, cuando aparezca en la primera posición hará un ruido que te indicara que se movió, los mismos pasará con la segunda y tercera, pero haciendo un sonido más alto, el monstruo tendrá un 50% de posibilidades
-de moverse cada 30 segundos, a mediada que el jugador avance en los minijuegos se reducirá el tiempo que tarda en moverse, cuando el jugador acabe el primer nivel, cada 25 cuando acabes el segundo, cada 20 y cuando acabes el tercero
+de moverse cada 30 segundos, a mediada que el jugador avance en los minijuegos, se reducirá el tiempo que tarda en moverse, cuando el jugador acabe el primer nivel, cada 25 cuando acabes el segundo, cada 20 y cuando acabes el tercero
 cada 15.
 
 # Personajes
