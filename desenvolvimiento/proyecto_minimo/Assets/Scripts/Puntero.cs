@@ -9,12 +9,12 @@ public class Puntero : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
+        Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
+        Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
     }
 }
