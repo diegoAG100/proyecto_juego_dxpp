@@ -57,28 +57,42 @@ public class Escopeta : MonoBehaviour
     public void OnMouseUp(){
         if(timer<0&&dontShoot){
             ShootWeapon();
-            //Destroy(circleInstance);
+            Destroy(circleInstance);
             circleInstance = null;
             mouseDown = false;
-            timer = 0f;
+            timer = 2f;
             shoot = true;
         }
         dontShoot = true;
     }
 
     public void ShootWeapon(){
-            //float angulo = Random.Range(0f, 360f);
-            //float radio = Mathf.Max(sr.bounds.size.x, sr.bounds.size.y) * 0.5f;
-            //Vector3 posicion = new Vector3(Mathf.Cos(angulo) * radio, Mathf.Sin(angulo) * radio, 0f);
-            //Vector3 bulletPosition =Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //float angulo = Random.Range(0f, 360f);
+        //float radio = Mathf.Max(sr.bounds.size.x, sr.bounds.size.y) * 0.5f;
+        //Vector3 posicion = new Vector3(Mathf.Cos(angulo) * radio, Mathf.Sin(angulo) * radio, 0f);
+        //Vector3 bulletPosition =Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            float minX = sr.bounds.size.x * -0.5f;
-            float minY = sr.bounds.size.y * -0.5f;
+        // Asegúrate de que el círculo tiene un Collider2D adjunto
+        CircleCollider2D circleCollider = circleInstance.GetComponent<CircleCollider2D>();
+
+        if (circleCollider != null)
+        {
+            float radio = circleCollider.radius;
             float minZ = 0;
 
-            Instantiate(bullet,this.transform.TransformPoint(new Vector3(Random.Range (minX, -minX),Random.Range (minY, -minY),Random.Range (minZ, -minZ))), Quaternion.identity);
-            sr = null;
-            shoot = false;
+            float randomAngle = Random.Range(0f, 2f * Mathf.PI);
+
+            float randomRadius = Mathf.Sqrt(Random.Range(0f, 1f)) * radio;
+
+            float randomX = randomRadius * Mathf.Cos(randomAngle);
+            float randomY = randomRadius * Mathf.Sin(randomAngle);
+
+            Vector3 globalPosition = circleInstance.transform.TransformPoint(new Vector3(randomX, randomY, minZ));
+
+            GameObject instanceBullet = Instantiate(bullet, globalPosition, Quaternion.identity);
+        }
+
+        sr = null;
+        shoot = false;
     }
-    //https://hamy.xyz/labs/unity-how-to-find-a-random-point-within-a-collider-mesh
 }
