@@ -15,7 +15,7 @@ El objetivo del jugador será escapar del circo, el jugador tendrá que enfrenta
 1. Escopeta: En este minijuego tendrás que tirar 10 latas con disparos, en este minijuego el ratón (del ordenador) se convertirá en un círculo rojo, en cuanto el jugador pulse en un punto de la pantalla aparecerá un nuevo círculo negro
 alrededor del círculo rojo mientras se mantenga presionado el círculo irá haciéndose más pequeño hasta que se ponga del tamaño del círculo rojo, si el jugador tarda más de 2 segundos en disparar después de que llegue al círculo rojo
 disparará a un punto aleatorio de la pantalla, el círculo negro es el área en el que puede ir el disparo, así que si le das muy pronto no tendrás la suficiente precisión y fallará, cuando el jugador dispare tendrás que esperar 2 segundos
-Para poder disparar de nuevo, en este tiempo de pausa se ejecutará un sonido de recámara y el Sprite de la escopeta se pondrá hacia abajo.
+Para poder disparar de nuevo, en este tiempo de pausa se ejecutará un sonido de recámara.
 
 2. Dardos: Este minijuego tiene como objetivo explotar 10 globos con unos dardos que el jugador lanzara, para este minijuego se usara un círculo rojo como puntero, en el momento en el que el jugador presione el ratón aparecerá una barra
 encima del puntero, esta barra tendrá una línea negra que avanzara hacia delante y hacia detrás y cuando el jugador suelte la línea se parará, en medio de la barra habrá una zona de color rojo, el objetivo del jugador es hacer que la línea
@@ -75,42 +75,3 @@ El juego será desarrollado en Unity, los assets serán creados en Aseprite, el 
 La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo explicando las fases del desarrollo de un videojuego y ejemplificándolo con este proyecto.
 
 El título del juego no lo tengo pensado aún, pero quiero que tenga las palabras circo, carnaval o terror.
-
-# Lista de issues
-
-- [ ] Artes
-    - [ ] Fondo 1
-    - [ ] Fondo 2
-    - [ ] Fondo 3
-    - [ ] Fondo 4
-    - [ ] Fondo 5
-    - [ ] Lata 1
-    - [ ] Lata 2
-    - [ ] Escopeta
-    - [ ] Dardo
-    - [ ] Globos
-    - [ ] Animación balón
-    - [ ] Bola
-    - [ ] Vasos
-    - [ ] Monstruo
-    - [ ] Corazón
-- [ ] Crear clase que modifica el puntero del ratón
-- [ ] Minijuego escopeta
-    - [ ] Adaptar la clase del puntero para este minijuego
-    - [ ] Programar segundo círculo
-    - [ ] Programar la interacción con las latas del disparo
-- [ ] Minijuego dardos
-    - [ ] Programar barra
-    - [ ] Programar lanzamiento dardo
-    - [ ] Programar interacción con globo
-- [ ] Minijuego baloncesto
-    - [ ] Programar puntero
-    - [ ] Programar lanzamiento
-    - [ ] Programar interacción canasta
-- [ ] Minijuego vasos
-    - [ ] Programar movimiento vaso
-    - [ ] Programar Interacción de puntero con vaso
-- [ ] Mecánica monstruo
-    - [ ] Programar movimiento monstruo
-    - [ ] Programar ataque monstruo
-    - [ ] Programar interacción con la linterna
