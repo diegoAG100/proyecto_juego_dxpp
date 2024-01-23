@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static Balon;
 
 public class MovimientoBola : MonoBehaviour
 {
     Vector2 spawnPoint;
     public bool horizontal = true;
     public bool vertical = true;
+    public Balon balon;
 
     public float timeHorizontalMovement = 2f;
     private float timePast = 0f;
@@ -92,6 +94,7 @@ public class MovimientoBola : MonoBehaviour
 
     private IEnumerator Restart()
     {
+        balon.a();
         yield return new WaitForSeconds(5);
         switchMovement = false;
         stop = false;
