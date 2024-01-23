@@ -80,6 +80,7 @@ public class Balon : MonoBehaviour
             }
             if(basketUp&& col.tag == "canasta"){
                 basketUp =false;
+                AdministradorPunto.instance.AddPointsBasket();
             }
         }
     }
