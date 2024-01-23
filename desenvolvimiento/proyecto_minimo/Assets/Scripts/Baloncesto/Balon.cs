@@ -1,28 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.U2D.Animation;
 
 public class Balon : MonoBehaviour
 {
-    public float scale = 1, scaleFin;
+    public float scale = 1, scaleFin,scaleInicial;
     Collider2D col;
     public GameObject b;
     Rigidbody2D rb;
     public List<Collider2D> colliderList;
     Vector2 sP;
     bool movimiento = false; 
+    SpriteRenderer sr;
+    Animator anim;
     void Start()
     {
         col = GetComponent<Collider2D>();
         scale = transform.localScale.x;
+        scaleInicial = scale;
         scaleFin = scale / 2;
         sP = transform.localPosition;
+        sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     public void a()
     {
-
-        rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 1;
         rb.AddForce((b.transform.position - transform.position) * 100);
         Invoke("ReturnSP", 5);
@@ -32,10 +37,12 @@ public class Balon : MonoBehaviour
     {
         if (movimiento)
         {
-            scale = Mathf.Lerp(scale, scaleFin, 0.05f);
+            anim.SetTrigger("Lanzamiento");
+            scale = Mathf.Lerp(scale, scaleFin, 0.005f);
             transform.localScale = new Vector3(scale, scale, scale);
             if (rb.velocity.y < 0)
             {
+                sr.sortingOrder = 2;
                 col.enabled = true;
                 foreach (var collider in colliderList)
                 {
@@ -48,13 +55,21 @@ public class Balon : MonoBehaviour
 
         void ReturnSP()
         {
+        anim.ResetTrigger("Lanzamiento");
+        anim.SetTrigger("Vuelta");
         movimiento = false;
         foreach (var collider in colliderList)
         {
             collider.enabled = false;
         }
         transform.localPosition = sP;
-         gameObject.transform.localScale = new Vector2(scale, scale);
+        gameObject.transform.localScale = new Vector2(scaleInicial, scaleInicial);
+        scale = scaleInicial;
+        rb.gravityScale = 0;
+        rb.velocity = Vector3.zero;
+        rb.totalTorque = 0;
+        rb.rotation = 0;
+        sr.sortingOrder = 4;
         }
     }
 
