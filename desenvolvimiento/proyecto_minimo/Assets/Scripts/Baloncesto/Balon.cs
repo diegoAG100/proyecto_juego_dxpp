@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -14,12 +15,15 @@ public class Balon : MonoBehaviour
     bool movimiento = false; 
     SpriteRenderer sr;
     Animator anim;
+
+    bool basketUp = false;
+    bool basketDown = false;
     void Start()
     {
         col = GetComponent<Collider2D>();
         scale = transform.localScale.x;
         scaleInicial = scale;
-        scaleFin = scale / 2;
+        scaleFin = scale / 3;
         sP = transform.localPosition;
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
@@ -38,7 +42,7 @@ public class Balon : MonoBehaviour
         if (movimiento)
         {
             anim.SetTrigger("Lanzamiento");
-            scale = Mathf.Lerp(scale, scaleFin, 0.005f);
+            scale = Mathf.Lerp(scale, scaleFin, 0.003f);
             transform.localScale = new Vector3(scale, scale, scale);
             if (rb.velocity.y < 0)
             {
@@ -67,9 +71,16 @@ public class Balon : MonoBehaviour
         scale = scaleInicial;
         rb.gravityScale = 0;
         rb.velocity = Vector3.zero;
-        rb.totalTorque = 0;
-        rb.rotation = 0;
         sr.sortingOrder = 4;
+        }
+
+        void OnTriggerEnter2D(Collider2D col){
+            if(col.tag == "preCanasta"){
+                basketUp = true;
+            }
+            if(basketUp&& col.tag == "canasta"){
+                basketUp =false;
+            }
         }
     }
 

@@ -37,6 +37,7 @@ public class Lata : MonoBehaviour
             }
             audioSource.Play();
             GetComponent<Collider2D>().enabled=false;
+            AdministradorPunto.instance.AddPointsShootgun();
             Destroy(collision.gameObject);
         }
     }
