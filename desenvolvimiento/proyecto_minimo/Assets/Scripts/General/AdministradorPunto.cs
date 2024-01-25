@@ -5,6 +5,7 @@ using UnityEngine;
 public class AdministradorPunto : MonoBehaviour
 {
     static public AdministradorPunto instance;
+    public MovementButton mb;
     int pointShootgun = 0;
     int pointBasket = 0;
     int pointDards = 0;
@@ -31,6 +32,7 @@ public class AdministradorPunto : MonoBehaviour
             }
             shootgun.gameObject.active=false;
             basket.gameObject.active=true;
+            mb.returnZone = basket.gameObject;
         }
     }
     public void AddPointsBasket(){
@@ -38,6 +40,7 @@ public class AdministradorPunto : MonoBehaviour
         if(pointBasket >=10){
             basket.gameObject.active=false;
             dards.gameObject.active = true;
+            mb.returnZone = dards.gameObject;
         }
     }
     public void AddPointsDards(){
