@@ -3327,6 +3327,10 @@ MonoBehaviour:
   - {fileID: 569880629}
   - {fileID: 800343532}
   adjudiquePositions: []
+  vasos:
+  - {fileID: 833796563}
+  - {fileID: 1494936945}
+  - {fileID: 1067459302}
 --- !u!1 &1039052415
 GameObject:
   m_ObjectHideFlags: 0

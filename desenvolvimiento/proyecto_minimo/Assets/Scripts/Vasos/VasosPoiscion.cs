@@ -8,6 +8,7 @@ public class VasosPoiscion : MonoBehaviour
     static public VasosPoiscion instance;
     public List<Transform> positions;
     public List<Transform> adjudiquePositions;
+    public List<Vaso> vasos;
 
     void Awake(){
         Debug.Log("1");
@@ -17,13 +18,13 @@ public class VasosPoiscion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(tal());
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(adjudiquePositions.Count >3){
+        if(adjudiquePositions.Count >=3){
             positions.Clear();
             foreach(Transform t in adjudiquePositions){
                 positions.Add(t);
@@ -40,5 +41,15 @@ public class VasosPoiscion : MonoBehaviour
         adjudiquePositions.Add(poitionSend);
         positions.Remove(poitionSend);
         return poitionSend;
+    }
+
+    public IEnumerator tal()
+    {
+        yield return new WaitForSeconds(3);
+        foreach(Vaso v in vasos) 
+        {
+            v.NewPosition();
+        }
+        StartCoroutine(tal());
     }
 }
