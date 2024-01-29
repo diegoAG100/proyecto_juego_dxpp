@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.XR;
 
 public class VasosPoiscion : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class VasosPoiscion : MonoBehaviour
     public List<Transform> positions;
     public List<Transform> adjudiquePositions;
     public List<Vaso> vasos;
+    public float veces = 0;
 
     void Awake(){
         Debug.Log("1");
@@ -18,7 +20,28 @@ public class VasosPoiscion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(tal());
+    }
+
+    public void Iniciar()
+    {
+        veces = 0;
+    }
+    public void CorrutinaInicio()
+    {
+        // hay que cambiar esto por boleanos dependiendo de el nivel para que se puede volver al menu para que tal
+        if (veces ==3)
+        {
+            veces = 0;
+            StartCoroutine(tal(10,1.4f));
+            return;
+        }
+        if (veces ==10)
+        {
+            veces = 0;
+            StartCoroutine(tal(20,0.8f));
+            return;
+        }
+        StartCoroutine(tal(3,2));
     }
 
     // Update is called once per frame
@@ -43,13 +66,22 @@ public class VasosPoiscion : MonoBehaviour
         return poitionSend;
     }
 
-    public IEnumerator tal()
+    public IEnumerator tal(int vecesRecpetir,float velocida)
     {
-        yield return new WaitForSeconds(3);
-        foreach(Vaso v in vasos) 
+        yield return new WaitForSeconds(velocida);
+        if (veces<vecesRecpetir)
         {
-            v.NewPosition();
+            foreach (Vaso v in vasos)
+            {
+                v.NewPosition();
+            }
+            StartCoroutine(tal(vecesRecpetir, velocida));
         }
-        StartCoroutine(tal());
+        else {
+            Debug.Log(veces);
+            CorrutinaInicio();
+
+        }
+        veces++;
     }
 }

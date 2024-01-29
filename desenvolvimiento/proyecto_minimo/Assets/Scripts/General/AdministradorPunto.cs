@@ -39,20 +39,21 @@ public class AdministradorPunto : MonoBehaviour
         pointBasket +=1;
         if(pointBasket >=10){
             basket.gameObject.active=false;
-            dards.gameObject.active = true;
+            glass.gameObject.active = true;
             mb.returnZone = dards.gameObject;
+            GetComponent<VasosPoiscion>().Iniciar();
         }
     }
     public void AddPointsDards(){
-        pointDards +=1;
-        if(pointDards >=10){
-            dards.gameObject.active=false;
-            glass.gameObject.active=true;
+        pointGlass += 1;
+        if(pointGlass >= 3){
+            dards.gameObject.active = true;
+            glass.gameObject.active = false;
         }
     }
     public void AddPointsGlass(){
-        pointGlass +=1;
-        if(pointGlass >=3){
+        pointDards += 1;
+        if(pointDards >= 10){
             glass.gameObject.active=false;
         }
     }
