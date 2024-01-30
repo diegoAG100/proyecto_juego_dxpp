@@ -9,7 +9,7 @@ public class AdministradorPunto : MonoBehaviour
     int pointShootgun = 0;
     int pointBasket = 0;
     int pointDards = 0;
-    int pointGlass = 0;
+    public int pointGlass = 0;
 
     public Canvas shootgun,basket,dards,glass;
 
