@@ -10,6 +10,7 @@ public class AdministradorPunto : MonoBehaviour
     int pointBasket = 0;
     int pointDards = 0;
     public int pointGlass = 0;
+    public bool shootgunFin =false, basketFin = false, glassFin = false;
 
     public Canvas shootgun,basket,dards,glass;
 
@@ -33,6 +34,7 @@ public class AdministradorPunto : MonoBehaviour
             shootgun.gameObject.active=false;
             basket.gameObject.active=true;
             mb.returnZone = basket.gameObject;
+            shootgunFin = true;
         }
     }
     public void AddPointsBasket(){
@@ -40,15 +42,18 @@ public class AdministradorPunto : MonoBehaviour
         if(pointBasket >=10){
             basket.gameObject.active=false;
             glass.gameObject.active = true;
-            mb.returnZone = dards.gameObject;
+            mb.returnZone = glass.gameObject;
             GetComponent<VasosPoiscion>().Iniciar();
+            basketFin = true;
         }
     }
     public void AddPointsDards(){
         pointGlass += 1;
         if(pointGlass >= 3){
-            dards.gameObject.active = true;
+            Application.Quit();
+            //dards.gameObject.active = true;
             glass.gameObject.active = false;
+            glassFin = true;
         }
     }
     public void AddPointsGlass(){

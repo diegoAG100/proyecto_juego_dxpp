@@ -13,7 +13,7 @@ public class MovementButton : MonoBehaviour
         if(timer>0){
             return;
         }
-        timer = 6;
+        timer = 3;
         if(returnZone.active == true){
             returnZone.active =false;
             fondoMostro.GetComponent<Collider2D>().enabled = true;
