@@ -15,7 +15,7 @@ public class MovimientoBola : MonoBehaviour
     private float timePast = 0f;
 
     private bool switchMovement = false;
-    private bool stop = false;
+    public bool stop = false;
 
     void Start()
     {
@@ -96,6 +96,16 @@ public class MovimientoBola : MonoBehaviour
     {
         balon.a();
         yield return new WaitForSeconds(5);
+        switchMovement = false;
+        stop = false;
+        transform.position = spawnPoint;
+        timeHorizontalMovement = 2;
+        horizontal = true;
+        vertical = false;
+        timePast = 0;
+        StopAllCoroutines();
+    }
+    public void RestartFuera(){
         switchMovement = false;
         stop = false;
         transform.position = spawnPoint;

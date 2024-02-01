@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Puntero : MonoBehaviour
@@ -15,6 +16,11 @@ public class Puntero : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
+        
+    }
+    void OnApplicationFocus(bool tal){
+        if(tal){
+            Cursor.SetCursor(punteroEscopeta,tamañoPunteroEscopeta,CursorMode.Auto);
+        }
     }
 }

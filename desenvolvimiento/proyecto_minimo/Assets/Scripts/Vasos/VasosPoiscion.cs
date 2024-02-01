@@ -107,4 +107,9 @@ public class VasosPoiscion : MonoBehaviour
         }
 
     }
+    public void DisabelGlass(){
+        foreach(Vaso go in vasos){
+            go.GetComponent<Collider2D>().enabled=false;
+        }
+    }
 }

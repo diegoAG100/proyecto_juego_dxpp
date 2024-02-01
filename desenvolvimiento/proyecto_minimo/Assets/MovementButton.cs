@@ -9,6 +9,8 @@ public class MovementButton : MonoBehaviour
     public GameObject fondoMostro;
     public GameObject returnZone; 
     float timer = 0;
+    public MovimientoBola movimientoBola;
+    public Collider2D colliderBasket;
     void OnMouseEnter(){
         if(timer>0){
             return;
@@ -20,6 +22,10 @@ public class MovementButton : MonoBehaviour
             {
                 c.gameObject.SetActive(false);
             }
+        }
+        if(movimientoBola.stop==true){
+            movimientoBola.RestartFuera();
+            colliderBasket.enabled = true;
         }
         timer = 3;
         if(returnZone.active == true){

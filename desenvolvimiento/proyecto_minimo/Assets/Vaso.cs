@@ -59,11 +59,13 @@ public class Vaso : MonoBehaviour
         {
             GetComponent<Animator>().SetTrigger("Subir");
             AdministradorPunto.instance.AddPointsDards();
+
         }
         else
         {
             AdministradorPunto.instance.glass.gameObject.active = false;
             AdministradorPunto.instance.glass.gameObject.active = true;
         }
+        VasosPoiscion.instance.DisabelGlass();
     }
 }

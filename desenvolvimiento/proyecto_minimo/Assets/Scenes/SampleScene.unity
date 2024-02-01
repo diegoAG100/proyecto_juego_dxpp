@@ -2269,7 +2269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &449182296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4110,7 +4110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1220537997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4250,6 +4250,8 @@ MonoBehaviour:
   mostroZone: {fileID: 1309101251}
   fondoMostro: {fileID: 1850790410}
   returnZone: {fileID: 189971454}
+  movimientoBola: {fileID: 1876359484}
+  colliderBasket: {fileID: 169016516}
 --- !u!212 &1245320421
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6021,6 +6023,7 @@ MonoBehaviour:
   vertical: 0
   balon: {fileID: 1618558483}
   timeHorizontalMovement: 2
+  stop: 0
 --- !u!1 &1907384403
 GameObject:
   m_ObjectHideFlags: 0
