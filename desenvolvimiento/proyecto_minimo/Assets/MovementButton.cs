@@ -13,6 +13,14 @@ public class MovementButton : MonoBehaviour
         if(timer>0){
             return;
         }
+        var a = GameObject.FindGameObjectsWithTag("Mark");
+        if (a.Length>0)
+        {
+            foreach(var c in a)
+            {
+                c.gameObject.SetActive(false);
+            }
+        }
         timer = 3;
         if(returnZone.active == true){
             returnZone.active =false;
