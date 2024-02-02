@@ -11,8 +11,11 @@ public class AdministradorPunto : MonoBehaviour
     int pointDards = 0;
     public int pointGlass = 0;
     public bool shootgunFin =false, basketFin = false, glassFin = false;
-
+    public SpriteRenderer transicion;
     public Canvas shootgun,basket,dards,glass;
+    public bool subir=false;
+    public bool bajar=false;
+    public AudioSource aS;
 
     void Awake(){
         instance = this;
@@ -21,7 +24,14 @@ public class AdministradorPunto : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (subir)
+        {
+            transicion.color = new Color(transicion.color.r, transicion.color.g, transicion.color.b, transicion.color.a+1*Time.deltaTime);
+        }
+        if (bajar)
+        {
+            transicion.color = new Color(transicion.color.r, transicion.color.g, transicion.color.b, transicion.color.a - 1 * Time.deltaTime);
+        }
     }
 
     public void AddPointsShootgun(){
@@ -31,8 +41,7 @@ public class AdministradorPunto : MonoBehaviour
             foreach(GameObject go in list){
                 Destroy(go);
             }
-            shootgun.gameObject.active=false;
-            basket.gameObject.active=true;
+            StartCoroutine(Transicion(shootgun, basket,0));
             mb.returnZone = basket.gameObject;
             shootgunFin = true;
         }
@@ -40,8 +49,7 @@ public class AdministradorPunto : MonoBehaviour
     public void AddPointsBasket(){
         pointBasket +=1;
         if(pointBasket >=10){
-            basket.gameObject.active=false;
-            glass.gameObject.active = true;
+            StartCoroutine(Transicion(basket, glass,1));
             mb.returnZone = glass.gameObject;
             GetComponent<VasosPoiscion>().Iniciar();
             basketFin = true;
@@ -60,6 +68,23 @@ public class AdministradorPunto : MonoBehaviour
         pointDards += 1;
         if(pointDards >= 10){
             glass.gameObject.active=false;
+        }
+    }
+
+    IEnumerator Transicion(Canvas desactivar, Canvas activar,int a)
+    {
+        aS.Play();
+        subir = true;
+        yield return new WaitForSeconds(2);
+        bajar = true;
+        subir = false;
+        desactivar.gameObject.active = false;
+        activar.gameObject.active = true;
+        yield return new WaitForSeconds(2);
+        bajar = false;
+        if (a==1)
+        {
+            GetComponent<VasosPoiscion>().Iniciar();
         }
     }
 }

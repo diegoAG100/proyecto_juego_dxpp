@@ -11,6 +11,11 @@ public class MovementButton : MonoBehaviour
     float timer = 0;
     public MovimientoBola movimientoBola;
     public Collider2D colliderBasket;
+    SpriteRenderer spriteRenderer;
+    private void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
     void OnMouseEnter(){
         if(timer>0){
             return;
@@ -23,7 +28,22 @@ public class MovementButton : MonoBehaviour
                 c.gameObject.SetActive(false);
             }
         }
-        if(movimientoBola.stop==true){
+        var list = GameObject.FindGameObjectsWithTag("bullet");
+        if (list.Length > 0)
+        {
+            foreach (GameObject go in list)
+            {
+                if (go.GetComponent<SpriteRenderer>().enabled==false)
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = true;
+                }
+                else
+                {
+                    go.GetComponent<SpriteRenderer>().enabled = false;
+                }
+            }
+        }
+        if (movimientoBola.stop==true){
             movimientoBola.RestartFuera();
             colliderBasket.enabled = true;
         }
@@ -31,14 +51,24 @@ public class MovementButton : MonoBehaviour
         if(returnZone.active == true){
             returnZone.active =false;
             fondoMostro.GetComponent<Collider2D>().enabled = true;
+            Invoke("VisiblePanel",3);
         }
         else{
             returnZone.active =true;
             fondoMostro.GetComponent<Collider2D>().enabled = false;
+            Invoke("VisiblePanel", 3);
         }
+        spriteRenderer.enabled = false;
     }
     
     void Update(){
         timer -= Time.deltaTime;
+
     }
+
+    void VisiblePanel()
+    {
+        spriteRenderer.enabled = true;
+    }
+    
 }

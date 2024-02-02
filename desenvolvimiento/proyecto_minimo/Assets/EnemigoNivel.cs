@@ -16,10 +16,12 @@ public class EnemigoNivel : MonoBehaviour
     float timer = 0;
     bool mostroDesaparece;
     public Mostro mostroScript;
+    AudioSource aS;
     void Start(){
         srMostro = mostro.GetComponent<SpriteRenderer>();
         srMostro2 = mostro2.GetComponent<SpriteRenderer>();
         srMostro3 = mostro3.GetComponent<SpriteRenderer>();
+        aS = GetComponent<AudioSource>();
     }
 
     void OnMouseDown(){
@@ -30,16 +32,19 @@ public class EnemigoNivel : MonoBehaviour
         if(mostro.active==true){
             srMostro.color = Color.white;
             mostroDesaparece = true;
+            aS.Play();
         }
         if (mostro2.active == true)
         {
             srMostro2.color = Color.white;
             mostroDesaparece = true;
+            aS.Play();
         }
         if (mostro3.active == true)
         {
             srMostro3.color = Color.white;
             mostroDesaparece = true;
+            aS.Play();
         }
         timer =6;
         srEscenario.sprite = luz;

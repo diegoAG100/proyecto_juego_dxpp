@@ -15,6 +15,7 @@ public class Balon : MonoBehaviour
     bool movimiento = false; 
     SpriteRenderer sr;
     Animator anim;
+    public AudioSource aS;
 
     bool basketUp = false;
     bool basketDown = false;
@@ -81,6 +82,7 @@ public class Balon : MonoBehaviour
             if(basketUp&& col.tag == "canasta"){
                 basketUp =false;
                 AdministradorPunto.instance.AddPointsBasket();
+                aS.Play(); 
             }
         }
     }
