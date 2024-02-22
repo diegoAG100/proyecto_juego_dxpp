@@ -67,6 +67,9 @@ El juego será desarrollado en Unity, los assets serán creados en Aseprite, el 
 
 # Estrategia de marketing
 
-La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo explicando las fases del desarrollo de un videojuego y ejemplificándolo con este proyecto.
+La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo humoristico en el que comparare mi juego con Five Nights At Freddy's.
 
-El título del juego no lo tengo pensado aún, pero quiero que tenga las palabras circo, carnaval o terror.
+El titulo del juego sera "The Terrifying Carnival of Fear", este nombre representa claramente el juego, el juego esta ambientado en un carnaval en el que pasan cosas terrorificas.
+
+Las palabras claves usasdas en la pagina de itch.io son:
+short,2D,horror,game,escape,circus,animatronic,jester,chase,minigames,pixel art,spine-chilling,suspense,challenges,
