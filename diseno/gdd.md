@@ -2,7 +2,7 @@
 
 El objetivo de este proyecto es hacer un juego corto de terror que dure entre 5 y 8 minutos.
 
-El juego consistirá en 4 minijuegos que se tendrán que realizar mientras te proteges de un monstruo
+El juego consistirá en 3 minijuegos que se tendrán que realizar mientras te proteges de un monstruo
 
 # Descripción del juego
 
@@ -15,17 +15,13 @@ El objetivo del jugador será escapar del circo, el jugador tendrá que enfrenta
 1. Escopeta: En este minijuego tendrás que tirar 10 latas con disparos, en este minijuego el ratón (del ordenador) se convertirá en un círculo rojo, en cuanto el jugador pulse en un punto de la pantalla aparecerá un nuevo círculo negro
 alrededor del círculo rojo mientras se mantenga presionado el círculo irá haciéndose más pequeño hasta que se ponga del tamaño del círculo rojo, si el jugador tarda más de 2 segundos en disparar después de que llegue al círculo rojo
 disparará a un punto aleatorio de la pantalla, el círculo negro es el área en el que puede ir el disparo, así que si le das muy pronto no tendrás la suficiente precisión y fallará, cuando el jugador dispare tendrás que esperar 2 segundos
-Para poder disparar de nuevo, en este tiempo de pausa se ejecutará un sonido de recámara y el Sprite de la escopeta se pondrá hacia abajo.
+Para poder disparar de nuevo, en este tiempo de pausa se ejecutará un sonido de recámara.
 
-2. Dardos: Este minijuego tiene como objetivo explotar 10 globos con unos dardos que el jugador lanzara, para este minijuego se usara un círculo rojo como puntero, en el momento en el que el jugador presione el ratón aparecerá una barra
-encima del puntero, esta barra tendrá una línea negra que avanzara hacia delante y hacia detrás y cuando el jugador suelte la línea se parará, en medio de la barra habrá una zona de color rojo, el objetivo del jugador es hacer que la línea
-Negra se pare en la zona roja para que el dardo valla hacia donde está el puntero, en caso de que no caiga en la zona roja el tiro caerá en un sitio aleatorio de la pantalla.
-
-3. Baloncesto: El minijuego consistirá en meter 10 balones en la canasta en un círculo que se mueve constantemente de derecha a izquierda y en el momento en el que el jugador presione el clic sé parar y empezara a subir y bajar y en cuanto el jugador vuelva a pulsar el clic
+2. Baloncesto: El minijuego consistirá en meter 10 balones en la canasta en un círculo que se mueve constantemente de derecha a izquierda y en el momento en el que el jugador presione el clic sé parar y empezara a subir y bajar y en cuanto el jugador vuelva a pulsar el clic
 se paraba y la pelota se lanzará hacia el punto, el objetivo es que se meta en una canasta que esté en medio de la pantalla, a medida que avance la pelota hacia delante se hará más pequeño para hacer él
 Efecto de ilusión de movimiento hacia delante, si entra dentro anotará un punto y tardará 2 segundos en poder lanzar de nuevo el balón.
 
-4. Vasos: En este minijuego habrá 3 vasos y el jugador verá como se mete una pelota roja dentro de un vaso y se empezarán a bajar intercambiando posiciones de manera aleatoria unos con otros, el objetivo es ver
+3. Vasos: En este minijuego habrá 3 vasos y el jugador verá como se mete una pelota roja dentro de un vaso y se empezarán a bajar intercambiando posiciones de manera aleatoria unos con otros, el objetivo es ver
 el vaso en el que está la pelota y el jugador tendrá que encontrar la pelota 3 veces.
 
 Se traicionara entre minijuegos cuando se consiga la puntuación necesaria con un fundido a negro que se usara para cambio de fondo y assets.
@@ -33,9 +29,8 @@ Se traicionara entre minijuegos cuando se consiga la puntuación necesaria con u
 Mientras el jugador hace estos minijuegos tendrá que lidiar con un monstruo que te atacara, estará detrás del jugador y siempre tendrá un botón que le permitirá darse la vuelta para alumbrar al enemigo y que desaparezca,
 pero si alumbra sin que el monstruo este perderá una vida de las 3 que tendrá, solo perderá vidas al alumbrar erróneamente al monstruo, las vidas estarán en una esquina arriba a la izquierda y serán corazones,
 en el momento en el que el jugador vuelva al minijuego, si es el minijuego de los vasos se reiniciará el último intento para que puedas volver a ver donde se mete la bola, el monstruo tendrá 3 posiciones en la que
-Podrá estará, cuando aparezca en la primera posición hará un ruido que te indicara que se movió, los mismos pasará con la segunda y tercera, pero haciendo un sonido más alto, el monstruo tendrá un 50% de posibilidades
-de moverse cada 30 segundos, a mediada que el jugador avance en los minijuegos, se reducirá el tiempo que tarda en moverse, cuando el jugador acabe el primer nivel, cada 25 cuando acabes el segundo, cada 20 y cuando acabes el tercero
-cada 15.
+Podrá estar, cuando aparezca en la primera posición hará un ruido que te indicara que se movió, los mismos pasará con la segunda y tercera, pero haciendo un sonido más alto, el mostruo se movera cada
+25 segundos, a mediada que el jugador avance en los minijuegos, se reducirá el tiempo que tarda en moverse, cuando el jugador acabe el primer nivel, cada 20 cuando acabes el segundo, cada 15
 
 # Personajes
 
@@ -72,45 +67,13 @@ El juego será desarrollado en Unity, los assets serán creados en Aseprite, el 
 
 # Estrategia de marketing
 
-La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo explicando las fases del desarrollo de un videojuego y ejemplificándolo con este proyecto.
+La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo humoristico en el que comparare mi juego con Five Nights At Freddy's.
 
-El título del juego no lo tengo pensado aún, pero quiero que tenga las palabras circo, carnaval o terror.
+El título del juego será "The Terrifying Carnival of Fear", este nombre representa claramente el juego, el juego está ambientado en un carnaval en el que pasan cosas terroríficas.
 
-# Lista de issues
+Las palabras claves usadas en la página de itch.io son:
+Short,2D,horror,game,escape,circus,animatronic,jester,chase,minigames,pixel art,spine-chilling,suspense,challenges.
 
-- [ ] Artes
-    - [ ] Fondo 1
-    - [ ] Fondo 2
-    - [ ] Fondo 3
-    - [ ] Fondo 4
-    - [ ] Fondo 5
-    - [ ] Lata 1
-    - [ ] Lata 2
-    - [ ] Escopeta
-    - [ ] Dardo
-    - [ ] Globos
-    - [ ] Animación balón
-    - [ ] Bola
-    - [ ] Vasos
-    - [ ] Monstruo
-    - [ ] Corazón
-- [ ] Crear clase que modifica el puntero del ratón
-- [ ] Minijuego escopeta
-    - [ ] Adaptar la clase del puntero para este minijuego
-    - [ ] Programar segundo círculo
-    - [ ] Programar la interacción con las latas del disparo
-- [ ] Minijuego dardos
-    - [ ] Programar barra
-    - [ ] Programar lanzamiento dardo
-    - [ ] Programar interacción con globo
-- [ ] Minijuego baloncesto
-    - [ ] Programar puntero
-    - [ ] Programar lanzamiento
-    - [ ] Programar interacción canasta
-- [ ] Minijuego vasos
-    - [ ] Programar movimiento vaso
-    - [ ] Programar Interacción de puntero con vaso
-- [ ] Mecánica monstruo
-    - [ ] Programar movimiento monstruo
-    - [ ] Programar ataque monstruo
-    - [ ] Programar interacción con la linterna
+El KPI será las veces ejecutadas en el navegador, ya que me parece el dato al que mejor le ha ido.
+
+El juego será publicado en dos plataformas, itch.io la página principal, y GameJolt la secundaria, en el video largo de YouTube se publicitara solo el juego en itch.io para intentar mantenerse más tiempo en lo alto de la página, si publicitara las dos plataformas el tráfico se dividiría y el juego en ambas plataformas durara menos en la página de nuevo y popular.
