@@ -1,10 +1,12 @@
-# Introducción y visión general
+# The Terrifying Carnival of Fear
+
+## Introducción y visión general
 
 El objetivo de este proyecto es hacer un juego corto de terror que dure entre 5 y 8 minutos.
 
 El juego consistirá en 3 minijuegos que se tendrán que realizar mientras te proteges de un monstruo
 
-# Descripción del juego
+## Descripción del juego
 
 El juego estará ambientando en un circo abandonado, su estética será en pixel art y el juego será de terror y en primera persona.
 
@@ -32,11 +34,11 @@ en el momento en el que el jugador vuelva al minijuego, si es el minijuego de lo
 Podrá estar, cuando aparezca en la primera posición hará un ruido que te indicara que se movió, los mismos pasará con la segunda y tercera, pero haciendo un sonido más alto, el mostruo se movera cada
 25 segundos, a mediada que el jugador avance en los minijuegos, se reducirá el tiempo que tarda en moverse, cuando el jugador acabe el primer nivel, cada 20 cuando acabes el segundo, cada 15
 
-# Personajes
+## Personajes
 
 El único personaje que se podrá ver será el enemigo, será un robot-monstruo con un disfraz de bufón.
 
-# Artes
+## Artes
 
 El juego será 2d y con estética pixel art, ambientado en un circo, y el arte estará hecho por el diseñador gráfico (yo), los asset necesarios son:
 
@@ -52,7 +54,7 @@ El juego será 2d y con estética pixel art, ambientado en un circo, y el arte e
 10. El corazón de la interfaz
 11. Puntero ratón
 
-# Sonidos y música
+## Sonidos y música
 
 El juego no tendrá música como tal, tendrá un sonido ambiente que será de viento y de vez en cuando sonara ruidos como una rama rompiéndose, un grillo y sonidos de animales, además de esto el enemigo principal hará un sonido cada vez más fuerte, y cuando el jugador interactúe con los minijuegos también harán sonidos:
 
@@ -61,11 +63,11 @@ El juego no tendrá música como tal, tendrá un sonido ambiente que será de vi
 3. La pelota también tendrá un sonido al ser lanzada y cuando se meta en la canasta tendrá otro sonido.
 4. Los vasos harán ruido cuando se muevan y cuando aciertes la posición de la bola tendrás un sonido de Victorio, sin embargo, si fallas tendrás un sonido de derrota.
 
-# Plataformas y tecnologías
+## Plataformas y tecnologías
 
 El juego será desarrollado en Unity, los assets serán creados en Aseprite, el juego estará disponible para pc,webgl y móvil en la tienda itch.io, aunque es probable que por bugs inesperados no se pueda lanzar en webgl o en móvil.
 
-# Estrategia de marketing
+## Estrategia de marketing
 
 La principal promoción se hara en mis redes sociales del desarrollo del proyecto, la red principal será YouTube ([ameneduwudev](https://www.youtube.com/@AMENEDUWUDEV/videos)) en la que se subiran short y tik tok ([ameneduwudev](https://www.tiktok.com/@ameneduwudev)) en el que se resubiran, además, al final se hara un video largo humoristico en el que comparare mi juego con Five Nights At Freddy's.
 
