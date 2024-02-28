@@ -5,6 +5,6 @@ El título del juego será "The Terrifying Carnival of Fear", este nombre repres
 Las palabras claves usadas en la página de itch.io son:
 Short,2D,horror,game,escape,circus,animatronic,jester,chase,minigames,pixel art,spine-chilling,suspense,challenges.
 
-El KPI será las veces ejecutadas en el navegador, ya que me parece el dato al que mejor le ha ido.
+El KPI será las veces ejecutadas en el navegador, ya que el objetivo del juego es que la mayor cantidad de jugadores lo jugara, y las veces ejecutadas en el navegador, es el dato que demuestra que mas jugadores jugaron al juego.
 
 El juego será publicado en dos plataformas, itch.io la página principal, y GameJolt la secundaria, en el video largo de YouTube se publicitara solo el juego en itch.io para intentar mantenerse más tiempo en lo alto de la página, si publicitara las dos plataformas el tráfico se dividiría y el juego en ambas plataformas durara menos en la página de nuevo y popular.
